@@ -1,0 +1,28 @@
+Steps to run your Jupyter Notebook on an Amazon EC2 instance - 
+
+1. Setup an AWS account using your educational institution's ID to avail free credits. Link - https://www.awseducate.com/signin/SiteLogin
+
+2. Navigate to your AWS Account -> AWS Educate Starter Account -> AWS Console.
+
+3. From the console, navigate to Instances -> Launch Instance.
+
+4. Select t2.micro(free tier eligible). Click on review and launch. Create a new key pair and download it. This allows you to securely SSH into your instance.
+
+5. Install GitBash if you haven't done so. Run the following command - $ chmod 400 <path-to-key-pair>/<your key name>.pem so that only we can read our private key file.
+
+6. On the AWS console, click on Connect. Copy the command in the *Example* and edit it in the following way - 
+   ssh -i "C:\Users\Abhishek\<key pair name>.pem" -L 8888:localhost:8888 ec2-user@<ec2-instance>.compute-1.amazonaws.com
+   
+7. Once you're in your EC2 instance, update all existing packages in the instance by running - sudo yum update. Also, install python3 by running - sudo yum install python3.
+
+8. Create a virtual environment - python3 -m venv <name-of-virtual-environment>. This keeps a track of all the packages that are necessary. 
+
+9. Activate the virtual environment using - source.<name-of-virtual-environment>/bin/activate. Install all the necessary packages here using pip3 install numpy pandas seaborn....
+
+10. Transfer the data file that you want to work on using - scp -i "C:\Users\Abhishek\FirstAWS.pem" "F:\DS\filename.csv" ec2-user@<ec2-instance>.compute-1.amazonaws.com:~/ 
+
+11. To open Jupyter notebook, run the following command - jupyter notebook --no-browser. 
+
+12. Always remember to stop the instance. You can do this from your AWS Console -> Actions -> Instance State -> Stop.
+
+For more information, you can refer - https://medium.com/@junseopark/from-zero-to-aws-ec2-for-data-science-62e7a22d4579
