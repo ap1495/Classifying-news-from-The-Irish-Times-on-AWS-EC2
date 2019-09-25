@@ -6,7 +6,7 @@ Steps to run your Jupyter Notebook on an Amazon EC2 instance -
 
 3. From the console, navigate to Instances -> Launch Instance.
 
-4. Select t2.micro(free tier eligible). Click on review and launch. Create a new key pair and download it. This allows you to securely SSH into your instance.
+4. Select Amazon Linux 2 AMI (HVM)(usually the first option) -> t2.micro(free tier eligible). Click on review and launch. Create a new key pair and download it. This allows you to securely SSH into your instance.
 
 5. Install GitBash if you haven't done so. Run the following command - $ chmod 400 <path-to-key-pair>/<your key name>.pem so that only we can read our private key file.
 
