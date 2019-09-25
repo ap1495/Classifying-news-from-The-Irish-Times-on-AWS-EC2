@@ -17,7 +17,7 @@ Steps to run your Jupyter Notebook on an Amazon EC2 instance -
 
 8. Create a virtual environment - python3 -m venv <name-of-virtual-environment>. This keeps a track of all the packages that are necessary. 
 
-9. Activate the virtual environment using - source.<name-of-virtual-environment>/bin/activate. Install all the necessary packages here using pip3 install numpy pandas seaborn....
+9. Activate the virtual environment using - source .<name-of-virtual-environment>/bin/activate. Install all the necessary packages here using pip3 install numpy pandas seaborn....
 
 10. Transfer the data file that you want to work on using - scp -i "C:\Users\Abhishek\FirstAWS.pem" "F:\DS\filename.csv" ec2-user@<ec2-instance>.compute-1.amazonaws.com:~/ 
 
