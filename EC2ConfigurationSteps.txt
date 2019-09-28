@@ -25,4 +25,4 @@ Steps to run your Jupyter Notebook on an Amazon EC2 instance -
 
 12. Always remember to stop the instance. You can do this from your AWS Console -> Actions -> Instance State -> Stop.
 
-For more information, you can refer - https://medium.com/@junseopark/from-zero-to-aws-ec2-for-data-science-62e7a22d4579
+Check out my article on Medium for more information - https://medium.com/@ap14state/10-steps-to-run-your-data-science-projects-on-amazon-ec2-for-free-17a7b527004c
