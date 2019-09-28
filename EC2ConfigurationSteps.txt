@@ -11,7 +11,7 @@ Steps to run your Jupyter Notebook on an Amazon EC2 instance -
 5. Install GitBash if you haven't done so. Run the following command - $ chmod 400 <path-to-key-pair>/<your key name>.pem so that only we can read our private key file.
 
 6. On the AWS console, click on Connect. Copy the command in the *Example* and edit it in the following way - 
-   ssh -i "C:\Users\Abhishek\<key pair name>.pem" -L 8888:localhost:8888 ec2-user@<ec2-instance>.compute-1.amazonaws.com
+   ssh -i "C:\Users\Abhishek\Downloads\FirstAWS.pem" -L 8888:localhost:8888 ec2-user@ec2-54-234-138-232.compute-1.amazonaws.com
    
 7. Once you're in your EC2 instance, update all existing packages in the instance by running - sudo yum update. Also, install python3 by running - sudo yum install python3.
 
@@ -19,9 +19,9 @@ Steps to run your Jupyter Notebook on an Amazon EC2 instance -
 
 9. Activate the virtual environment using - source .<name-of-virtual-environment>/bin/activate. Install all the necessary packages here using pip3 install numpy pandas seaborn....
 
-10. Transfer the data file that you want to work on using - scp -i "C:\Users\Abhishek\FirstAWS.pem" "F:\DS\filename.csv" ec2-user@<ec2-instance>.compute-1.amazonaws.com:~/ 
+10. Open GitBash in a new window and transfer the data file that you want to work on using - scp -i "C:\Users\Abhishek\FirstAWS.pem" "F:\DS\filename.csv" ec2-user@<ec2-instance>.compute-1.amazonaws.com:~/ 
 
-11. To open Jupyter notebook, run the following command - jupyter notebook --no-browser. 
+11. To open Jupyter notebook, switch back to the GitBash window in which your virtual environment is active and run the following command - jupyter notebook --no-browser. 
 
 12. Always remember to stop the instance. You can do this from your AWS Console -> Actions -> Instance State -> Stop.
 
